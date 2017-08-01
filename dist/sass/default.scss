@@ -1,0 +1,58 @@
+@charset "utf-8";  
+/* CSS Document */ 
+
+/*! ATTENTION:This project uses SASS! Please make your CSS edits in sass/default.scss. */
+
+/* Basic Includes
+   ================================ */
+@import 'variables';
+@import 'misc/mixins';
+@import 'misc/reset';
+@import 'misc/custom_grid';
+@import 'misc/container';
+@import 'misc/extends'; 
+@import 'misc/fonts'; 
+@import 'misc/typography'; 
+@import 'misc/positioning';
+ 
+/* Begin Basic Coding
+   ================================ */
+/* Basic
+----------------------------- */
+html,
+body {
+    @include size($viewportSize);
+    min-height: 100% !important;
+}
+body {
+    height: auto; 
+    background:$defaultbg none repeat scroll 0 0;
+    color: #525254;
+}
+.dummy-height {
+    height: 800px;
+}
+
+/* End Basic Coding
+   ================================ */
+
+/* Miscellaneous Includes
+   ================================ */
+@import 'misc/wrapper';
+@import 'misc/globalClasses';
+
+/* Elements Includes
+   ================================ */
+@import 'elements/form/form';
+@import 'elements/form/button';
+
+@import 'elements/pagecontrols/pageheader'; 
+@import 'elements/pagecontrols/pagefooter';
+
+@import 'elements/navigation/sidebar';
+@import 'elements/navigation/responsive_sidebar';
+
+@import 'elements/key_elements/login';
+
+/* Elements Includes
+   ================================ */

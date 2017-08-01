@@ -1,0 +1,35 @@
+/* Page Header section
+================================ */
+
+.header {
+    @include padding(30px 0);
+    &__section {
+        &-logo {
+            max-width: 300px;
+            img {
+                object-fit: cover;
+                @include size(#{$viewportSize});
+            }
+        }
+        &-navigation {
+            width: $viewportSize;
+            .navigation {
+                &__main, &__user {
+                    ul {
+                        li {
+                            display: inline-block;
+                            + li {
+                                margin-left: 20px;
+                            }
+                        }
+                    }
+                }
+                &__user {
+                    &-loginProfile, &-login {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

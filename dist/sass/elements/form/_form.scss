@@ -1,0 +1,96 @@
+/* Form section
+================================ */
+
+.formStyle1 {
+    .label-control {
+        position: absolute;
+        top: 0.8rem;
+        left: 1.5rem;
+        cursor: text;
+        @include transition(0.3s ease-out);
+        z-index: 10;
+    }
+    input {
+        &[type="text"], &[type="password"], &[type="tel"], &[type="email"], &[type="search"], &[type="url"], &[type="number"] {
+            @include border-radius(0); 
+            border: none;
+            border-bottom: 1px solid $border;
+            height: 3rem;
+            @include padding(0);
+        }
+    }
+    .input-group, .form-group {
+        position: relative;
+        margin-top: 1.25rem;
+    }
+    .input-group {
+        .is {
+            color: $black;
+            @include align-self(center);
+        }
+        .form-control, .label-control { 
+            margin-left: 1.25rem;
+        }
+        .label-control {
+            left: 0.9rem;
+        }
+        &.active {
+            .label-control {
+                color: $fieldActive;
+                @include font-size(13);
+                @include translateY(-140%);
+            }
+            input {
+                &[type="text"], &[type="password"], &[type="tel"], &[type="email"], &[type="search"], &[type="url"], &[type="number"] {
+                    border-color: $fieldActive;
+                }
+            }
+            .is {
+                color: $fieldActive;
+            } 
+        }
+        &.custom-checkbox {
+            label {
+                @include padding-left(2.2rem);
+                @include font-size(13);
+                margin-top: 0.21rem;
+            }
+            input {
+                &[type="checkbox"] {
+                    display: none;
+                    &:checked {
+                        + label {
+                            &:before {
+                                top: -4px;
+                                left: -3px;
+                                width: 12px;
+                                height: 22px;
+                                border-top: 2px solid transparent;
+                                border-left: 2px solid transparent;
+                                border-right: 2px solid $fieldActive;
+                                border-bottom: 2px solid $fieldActive;
+                                @include rotate(40);
+                                -webkit-backface-visibility: hidden;
+                                @include transform-origin(100% 100%);
+                            }
+                        }
+                    }
+                    + label {
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            @include size(1.125rem); 
+                            z-index: 0;
+                            border: 2px solid lighten($black, 15%);
+                            border-radius: 1px;
+                            margin-top: 2px;
+                            @include transition(0.2s);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

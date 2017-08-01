@@ -1,0 +1,95 @@
+/* Material style */
+.button {
+    border: none;
+    outline: none;
+    width: auto;
+    cursor: pointer;
+    @include padding(0.75rem 1.25rem); 
+    &:focus {
+        outline: none;
+    }
+    
+    
+    &-block {
+        width: $viewportSize;
+        background: $fieldActive;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Ripple Effect */
+.ripple-effect {
+    position: relative;
+    overflow: hidden;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        background: rgba(255, 255, 255, .5);
+        opacity: 0;
+        border-radius: 100%;
+        transform: scale(1, 1) translate(-50%);
+        transform-origin: 50% 50%;
+    }
+    &:focus:not(:active)::after {
+        animation: ripple 1s ease-out;
+    }
+}
+@include keyframes(ripple) {
+  0% {
+      transform: scale(0, 0);
+      opacity: 1; 
+  }
+  20% {
+        transform: scale(25, 25);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+
+
+/* Begin Anchor Links style */ 
+
+.links {
+    &__left {
+        i, .is, .fa {
+            margin-right: 0.5rem;
+        }
+    }
+    &__underline {
+        border-bottom: 1px solid $transparent;
+    }
+    &__right {
+        i, .is, .fa {
+            margin-left: 0.5rem;
+        }
+    }
+    
+    &__blue {
+        color: $act_Blue !important;
+        &:hover, &:focus {
+            color: darken($act_Blue, 8%) !important;
+        }
+        &.links__underline {
+            border-color: $act_Blue !important;
+            &:hover, &:focus {
+                border-color: darken($act_Blue, 8%) !important;
+            }
+        }
+    } 
+}
+/* End Anchor Links style */ 
