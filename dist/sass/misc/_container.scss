@@ -22,3 +22,7 @@ $box-shadow-blk: 0 0 8px 0 rgba(0,0,0,0.33);
         width: $viewportSize;
     }
 }
+.mega-width {
+    max-width: $max-width;
+    @extend .col-centered;
+}

@@ -3,6 +3,7 @@
 
 .header {
     @include padding(30px 0);
+    background: $defaultbg none repeat scroll 0 0;
     &__section {
         &-logo {
             max-width: 300px;
@@ -25,8 +26,25 @@
                     }
                 }
                 &__user {
-                    &-loginProfile, &-login {
+                    &-login {
                         margin-left: 20px;
+                        li {
+                            font-weight: $weightBold;
+                            + li {
+                                margin-left: 5px !important;
+                                &:before {
+                                    content: '|';
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                    }
+                    &-loginProfile {
+                        margin-left: 20px;
+                        &-image {
+                            @include size(40px);
+                            cursor: pointer;
+                        }
                     }
                 }
             }

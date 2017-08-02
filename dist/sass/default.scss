@@ -26,11 +26,13 @@ body {
 }
 body {
     height: auto; 
-    background:$defaultbg none repeat scroll 0 0;
-    color: #525254;
+    background:$white none repeat scroll 0 0;
+    color: $baseColor;
+    font-family: $primaryFont;
+    font-weight: $weightRegular;
 }
-.dummy-height {
-    height: 800px;
+ul li, ol li {
+    font-weight: $weightRegular;
 }
 
 /* End Basic Coding

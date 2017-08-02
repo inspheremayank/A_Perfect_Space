@@ -28,6 +28,10 @@ $robotomedium:                          'RobotoMedium', Arial, sans-serif;
 $robotobold:                            'RobotoBold', Arial, sans-serif;
 $robotoblack:                           'RobotoBlack', Arial, sans-serif;
 
+/* Open Sans Font */
+$opensans:                              'Open Sans', Arial, sans-serif;
+
+
 $iconfont:	 			'FontAwesome';
 $illustrationfont: 			'insphere-icons';
 
@@ -59,7 +63,7 @@ $uppercase:                             uppercase;
 // ================================
 
 /* Primary Fonts Style */
-
+$primaryFont:                           $opensans;
 $primaryFont-thin:                      $montserrathairline;
 $primaryFont-light:                     $montserratlight;
 $primaryFont-regular:                   $montserratregular;
@@ -88,6 +92,12 @@ $ternaryFont-medium:                    $rubikmedium;
 $ternaryFont-bold:                      $rubikbold;
 $ternaryFont-black:                     $rubikblack;
 
+
+$weightLight:                           300;
+$weightRegular:                         400;
+$weightSemibold:                        600;
+$weightBold:                            700;
+$weightUltabold:                        900;
 
 strong, .strong { 
     font-weight: 700; 
