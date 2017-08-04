@@ -1,0 +1,50 @@
+/* cards section
+================================ */
+.card {
+    &__view {
+        &-content {
+            min-height: 400px;
+            position: relative;
+            .favorite {
+                position: absolute;
+                right: 0;
+                top: 0;
+                @include size(50px);
+                @include border-radius(0 4px 4px 4px);
+                text-align: center;
+                i {
+                    color: $white;
+                    @include font-size(20);
+                    line-height: 50px;
+                }
+                &:hover, &:focus {
+                    background: $defaultbg none repeat scroll 0 0;
+                }
+            }
+            figure {
+                height: 250px;
+                @include border-radius(4px);
+                margin-bottom: 15px;
+            }
+            h3 {
+                max-height: 50px;
+                @include font-size(18);
+                font-weight: $weightBold;
+                text-transform: uppercase;
+                margin-bottom: 5px;
+                overflow: hidden;
+            }
+            p {
+                max-height: 55px;
+                @include font-size(18);
+                font-weight: $weightLight;
+                overflow: hidden;
+            }
+            &.active {
+                .favorite {
+                    background: darken($defaultbg, 8%) none repeat scroll 0 0;
+                }
+            }
+        }
+    }
+}
