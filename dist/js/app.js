@@ -37,3 +37,31 @@ $(".responsive-standalone-overlay").on('click', function () {
 $(".card__view-content .favorite").on('click', function() {
     $(this).parents('.card__view-content').toggleClass('active');
 });
+
+$(".search-section input").on('focus', function() {
+    $(this).closest(".input-group").addClass("active");
+});
+$('.search-section input').on('blur', function() {
+    if( !$(this).val() ) {
+           $(this).closest(".input-group").removeClass("active");
+    }
+});
+
+$(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    });
+});
