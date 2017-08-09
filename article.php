@@ -14,8 +14,9 @@ include("includes/global_header.php");
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
-                            <div class="article__slides-content multiSlide">
+                            <div class="article__slides-content fourSlide">
                                 <ul>
+                                    <li class="image-covered" style="background-image: url('dist/images/demo2.png');"></li>
                                     <li class="image-covered" style="background-image: url('dist/images/demo2.png');"></li>
                                     <li class="image-covered" style="background-image: url('dist/images/demo2.png');"></li>
                                     <li class="image-covered" style="background-image: url('dist/images/demo2.png');"></li>

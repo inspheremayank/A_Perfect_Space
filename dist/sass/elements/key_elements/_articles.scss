@@ -21,7 +21,7 @@
                         width: calc(#{$viewportSize} / 2 - 8px) !important;
                     }
                     @media #{$media-ipadSmall} {
-                       height: 300px;
+                        height: 300px;
                     }
                 }
             }
@@ -42,14 +42,8 @@
                             height: 300px;
                         }
                     }
-                    
-                }
-            }
-            &.multiSlide {
-                ul li {
-                    &:nth-child(3) { 
-                        margin-right: 0px !important;
-                        width: calc(#{$viewportSize} / 2) !important;
+                    @media #{$media-tablet} {
+                        height: 150px !important;                        
                     }
                 }
             } 
@@ -88,6 +82,27 @@
                         &:nth-child(2), &:nth-child(3), &:last-child {
                             height: 100px;
                         } 
+                    }
+                }
+            }
+            &.fourSlide {
+                ul li {
+
+                }
+            }
+            &.multiSlide {
+                ul li { 
+                    &:nth-child(3) {  
+                        margin-right: 0px !important;
+                        width: calc(#{$viewportSize} / 2);
+                    }
+                    @media #{$media-ipadSmall} {
+                        &:nth-child(2), &:nth-child(3) {
+                            width: calc(#{$viewportSize} / 2) !important;
+                        }
+                        &:nth-child(2) {
+                            width: calc(#{$viewportSize} / 2 - 8px) !important; 
+                        }
                     }
                 }
             }
@@ -183,27 +198,27 @@
                 }
             }
             &__content {
-                 width: 70%;
-                 @media #{$media-ipadPortrait} {
+                width: 70%;
+                @media #{$media-ipadPortrait} {
                     width: $viewportSize;
                 }
-                 font-weight: $weightLight;
-                 @include padding-right(20px);
-                 .listing {
-                     overflow: hidden;
-                     li {
-                         width: calc(#{$viewportSize} / 2);
-                         font-weight: $weightLight;
-                         float: left;
-                         @include padding-right(20px);
-                         margin-bottom: 8px;
-                         &:before {
-                             content: '-';
-                             margin-right: 5px;
-                             @include font-size(20);
-                         }
-                     }
-                 }
+                font-weight: $weightLight;
+                @include padding-right(20px);
+                .listing {
+                    overflow: hidden;
+                    li {
+                        width: calc(#{$viewportSize} / 2);
+                        font-weight: $weightLight;
+                        float: left;
+                        @include padding-right(20px);
+                        margin-bottom: 8px;
+                        &:before {
+                            content: '-';
+                            margin-right: 5px;
+                            @include font-size(20);
+                        }
+                    }
+                }
             }
         }
     }
