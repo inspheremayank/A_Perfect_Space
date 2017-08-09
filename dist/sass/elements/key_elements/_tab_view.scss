@@ -13,6 +13,7 @@
     }
     &__rounded {
         ul li {
+            text-align: center;
             span {
                 @include size(50px);
                 @include border-radius(50%);
