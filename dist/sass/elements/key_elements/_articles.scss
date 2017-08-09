@@ -20,6 +20,9 @@
                         margin-right: 8px;
                         width: calc(#{$viewportSize} / 2 - 8px) !important;
                     }
+                    @media #{$media-ipadSmall} {
+                       height: 300px;
+                    }
                 }
             }
             &.singleSlide {
@@ -35,7 +38,11 @@
                     width: calc(#{$viewportSize} / 2);
                     &:nth-child(2) {
                         height: 500px;
+                        @media #{$media-ipadSmall} {
+                            height: 300px;
+                        }
                     }
+                    
                 }
             }
             &.multiSlide {
@@ -60,7 +67,44 @@
                         margin-right: 8px;
                         width: calc(#{$viewportSize} / 4 - 8px);
                     }
+                    @media #{$media-ipadSmall} {
+                        &:first-child {
+                            width: $viewportSize !important;
+                        }
+                        &:nth-child(2), &:nth-child(3) {
+                            margin-right: 8px  !important;
+                            width: calc(#{$viewportSize} / 3 - 8px) !important;
+                            height: 200px;
+                        }
+                        &:last-child {
+                            width: calc(#{$viewportSize} / 3) !important;
+                            height: 200px;
+                        }
+                    }
+                    @media #{$media-tablet} {
+                        &:first-child {
+                            height: 150px;
+                        }
+                        &:nth-child(2), &:nth-child(3), &:last-child {
+                            height: 100px;
+                        } 
+                    }
                 }
+            }
+        }
+        &-link {
+            position: absolute;
+            bottom: 35px;
+            right: 0;
+            width: 150px;
+            background: rgba($black, 0.5);
+            text-align: center;
+            a {
+                color: $white;
+                @include padding(15px);
+                text-transform: uppercase;
+                display: block;
+                font-weight: $weightBold;
             }
         }
     }
@@ -127,16 +171,26 @@
                         }
                     }
                 }
+                @media #{$media-ipadPortrait} {
+                    display: block;
+                } 
             }
             &__head {
                 width: 30%;
+                @media #{$media-ipadPortrait} {
+                    width: $viewportSize;
+                    margin-bottom: 15px;
+                }
             }
             &__content {
                  width: 70%;
+                 @media #{$media-ipadPortrait} {
+                    width: $viewportSize;
+                }
                  font-weight: $weightLight;
                  @include padding-right(20px);
-                 
                  .listing {
+                     overflow: hidden;
                      li {
                          width: calc(#{$viewportSize} / 2);
                          font-weight: $weightLight;
